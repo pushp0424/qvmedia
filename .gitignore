@@ -1,0 +1,9 @@
+# Ignore heavy sample reference file
+SAMPLE WEBSITE.html
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

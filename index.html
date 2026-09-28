@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QV Media — Creative Marketing & Communications Agency</title>
+  <meta name="description" content="QV Media helps ambitious businesses grow through strategy, content, branding, digital marketing, PR and creative campaigns.">
+  <meta name="keywords" content="QV Media, creative marketing agency, communications agency, brand strategy, digital growth, PR, content marketing">
+  <meta name="author" content="QV Media">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="QV Media — Creative Marketing & Communications Agency">
+  <meta property="og:description" content="Strategy, content, creativity, PR and digital marketing — brought together to build brands that move people and businesses forward.">
+  <meta property="og:image" content="LOGO.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- Google Fonts: Syne (Display), Space Grotesk (Editorial/Structure), DM Serif Display (Italic accents), Plus Jakarta Sans (Clean Modern Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Design System Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TACTILE PAPER SCROLL PROGRESS INDICATOR
+       ======================================================================== -->
+  <div class="paper-scroll-tracker" id="paperScrollTracker" aria-hidden="true">
+    <div class="paper-scroll-track">
+      <div class="paper-scroll-fill" id="paperScrollFill"></div>
+    </div>
+    <div class="paper-scroll-folio">
+      <span class="paper-reg-symbol">✛</span>
+      <span class="paper-folio-text" id="paperScrollFolio">01</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       STICKY FLOATING NAVIGATION
+       ======================================================================== -->
+  <header class="header-nav" id="mainHeader">
+    <div class="nav-wrapper">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo-link" aria-label="QV Media Home">
+        <img src="icon.png" alt="QV Media Logo Mark" class="brand-logo-mark" width="38" height="38">
+        <div class="brand-logo-text">
+          <span class="brand-name">QV MEDIA</span>
+          <span class="brand-tagline-micro">Creative Marketing &amp; Communications</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#approach" class="nav-link">Approach</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav CTA Actions -->
+      <div class="nav-actions">
+        <button type="button" class="nav-audit-trigger open-audit-modal">
+          <span>Free Brand Audit</span>
+        </button>
+        <a href="#contact" class="btn btn-primary nav-cta-btn">
+          <span>Let's Talk</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <!-- Mobile Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" aria-label="Toggle Mobile Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="#work" class="mobile-nav-link">Work</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#approach" class="mobile-nav-link">Approach</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <button type="button" class="btn btn-gold open-audit-modal mobile-drawer-cta">
+        <span>Request Free Brand Audit</span>
+      </button>
+      <a href="#contact" class="btn btn-primary mobile-drawer-cta">
+        <span>Let's Talk →</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         HERO SECTION: EDITORIAL PAPER COLLAGE MOODBOARD
+         ======================================================================== -->
+    <section class="hero-section hero-canvas" id="hero">
+      <!-- Subtle Paper Cut Registration Marks -->
+      <div class="paper-reg-mark mark-top-left" aria-hidden="true">✛</div>
+      <div class="paper-reg-mark mark-top-right" aria-hidden="true">⌖</div>
+      
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Commanding Editorial Content -->
+          <div class="hero-content hero-staged">
+            <div class="eyebrow stage-item stage-eyebrow">QV MEDIA / CREATIVE MARKETING &amp; COMMUNICATIONS</div>
+            <h1 class="hero-title stage-item stage-title">
+              WE MAKE BRANDS <br>
+              <span class="text-gold-italic">IMPOSSIBLE</span> TO IGNORE.
+            </h1>
+            <p class="hero-description stage-item stage-desc">
+              Strategy, content, creativity, PR and digital marketing — brought together to build brands that move people and businesses forward.
+            </p>
+            <div class="hero-ctas stage-item stage-ctas">
+              <a href="#contact" class="btn btn-primary open-conversation-modal">
+                <span>Start a Conversation</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="#work" class="btn btn-outline-light">
+                <span>Explore Our Work</span>
+              </a>
+            </div>
+
+            <!-- Strategic Focus Strip -->
+            <div class="hero-trust-strip stage-item stage-trust">
+              <span class="hero-trust-tag">Core Disciplines</span>
+              <div class="hero-trust-list">
+                <span class="hero-pill">Brand Architecture</span>
+                <span class="hero-pill">Short-Form Content</span>
+                <span class="hero-pill">Digital PR</span>
+                <span class="hero-pill">Growth Ads</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: "Paper-Cut Studio" Tactile Moodboard -->
+          <div class="hero-moodboard" aria-label="QV Media Studio Creative Moodboard">
+            <!-- Layer 1: Midnight Blue Base Card with Watermark -->
+            <div class="moodboard-layer moodboard-card-base stage-mb stage-mb-base" data-paper-depth="0.2">
+              <span class="moodboard-base-watermark">QV</span>
+              <div style="position: relative; z-index: 2;">
+                <div class="editorial-stamp" style="margin-bottom: 8px;">Studio Archive • Issue 01</div>
+                <div style="font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; color: var(--gold-light);">
+                  Where Strategy Meets Culture
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 2: Main Editorial Photograph (Polaroid style with tape) -->
+            <div class="moodboard-layer moodboard-photo-main stage-mb stage-mb-photo1" data-paper-depth="0.5">
+              <div class="paper-tape tape-top-center"></div>
+              <div class="paper-photo-frame">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" alt="Editorial Fashion &amp; Identity Shoot" loading="eager">
+                <div class="paper-photo-caption">
+                  <span>Lookbook / Brand Identity</span>
+                  <span class="text-gold">Plate 04</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 3: Secondary Editorial Fragment (Cinematography / Reel Shoot) -->
+            <div class="moodboard-layer moodboard-photo-secondary stage-mb stage-mb-photo2" data-paper-depth="0.75">
+              <div class="paper-tape tape-top-right"></div>
+              <div class="paper-photo-frame">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Creative Production and Film Direction" loading="eager">
+                <div class="paper-photo-caption">
+                  <span>Production 35mm</span>
+                  <span class="text-gold">Reel Cut</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 4: Strategy Note Card (Off-white paper scrap) -->
+            <div class="moodboard-layer moodboard-note-card stage-mb stage-mb-note" data-paper-depth="0.95">
+              <div class="paper-tape tape-top-left" style="width: 50px; height: 18px;"></div>
+              <p>“Businesses don't need more noise. They need better ideas and sharper execution.”</p>
+              <div class="moodboard-note-author">— QV Strategic Framework</div>
+            </div>
+
+            <!-- Layer 5: Gold Foil Seal -->
+            <div class="moodboard-layer moodboard-gold-seal stage-mb stage-mb-seal" data-paper-depth="1.25">
+              <div class="gold-seal-circle">
+                <span>ESTD</span>
+                <span>2026</span>
+                <span>STUDIO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Dark Ink to Cotton Off-White) -->
+    <div style="position: relative; width: 100%; height: 48px; background: var(--ink-black); overflow: hidden;">
+      <svg viewBox="0 0 1440 48" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,48 L0,18 Q90,38 210,12 T480,26 T750,8 T1020,32 T1260,14 T1440,24 L1440,48 Z" fill="#FAF9F5"/>
+        <line x1="0" y1="20" x2="1440" y2="20" stroke="#D4AF37" stroke-dasharray="4 8" stroke-opacity="0.3"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         QUICK BRAND STATEMENT SECTION
+         ======================================================================== -->
+    <section class="brand-statement-section" id="statement">
+      <div class="container">
+        <div class="statement-wrapper">
+          <div class="statement-eyebrow">
+            <span class="editorial-stamp editorial-stamp-dark">Positioning Matrix</span>
+          </div>
+          <h2 class="statement-headline">
+            WE DON'T JUST MANAGE YOUR MARKETING. <br>
+            <span>WE HELP BUILD THE BRAND BEHIND IT.</span>
+          </h2>
+          <p class="statement-copy">
+            From strategy and storytelling to content, social, PR and campaigns, QV Media brings the thinking and execution together under one creative roof.
+          </p>
+          <div class="statement-punch-box">
+            <span class="statement-punch-text">STRATEGY FIRST. CREATIVITY ALWAYS.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Cotton Off-White to Cream) -->
+    <div style="position: relative; width: 100%; height: 38px; background: #FAF9F5; overflow: hidden;">
+      <svg viewBox="0 0 1440 38" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,38 L0,14 Q140,28 320,10 T720,24 T1100,8 T1440,20 L1440,38 Z" fill="#F4F1EA"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         SERVICES SECTION ("WHAT WE DO") — 5 STRATEGIC PILLARS
+         ======================================================================== -->
+    <section class="services-section section-spacing" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="services-header">
+          <div>
+            <div class="eyebrow" style="color: var(--midnight-blue);">WHAT WE DO</div>
+            <h2 class="section-title-large" style="color: var(--midnight-blue); margin-bottom: 0.5rem;">
+              FROM THE IDEA <br>
+              <span class="text-gold-italic">TO THE IMPACT.</span>
+            </h2>
+          </div>
+          <p class="section-subtitle text-muted-dark">
+            We don't sell disconnected tasks or checklist deliverables. We organize our capabilities into five strategic pillars built to give ambitious brands an unfair advantage.
+          </p>
+        </div>
+
+        <!-- 5 Strategic Pillars Accordion Cards -->
+        <div class="services-pillars-grid">
+
+          <!-- Pillar 01: Social & Content -->
+          <article class="pillar-card active" id="pillar-01">
+            <button type="button" class="pillar-header-trigger" aria-expanded="true">
+              <span class="pillar-num">01</span>
+              <h3 class="pillar-title">SOCIAL &amp; CONTENT</h3>
+              <p class="pillar-summary">
+                Building community-first social ecosystems with thumb-stopping creative and consistent brand cadence.
+              </p>
+              <span class="pillar-chevron">↓</span>
+            </button>
+            <div class="pillar-drawer">
+              <div class="pillar-drawer-content">
+                <div class="pillar-drawer-meta">
+                  <h4>Strategic Narrative</h4>
+                  <p>
+                    Modern social is no longer about broadcast scheduling. It’s about cultural relevance, format mastery, and community momentum that converts passive scrollers into passionate advocates.
+                  </p>
+                  <button type="button" class="btn btn-outline-dark open-audit-modal" style="padding: 8px 18px; font-size: 0.8rem;">
+                    <span>Audit Your Content →</span>
+                  </button>
+                </div>
+                <div class="pillar-services-list">
+                  <span class="pillar-tag">Social Media Management</span>
+                  <span class="pillar-tag">Content Calendars</span>
+                  <span class="pillar-tag">Reels &amp; Short-Form Video</span>
+                  <span class="pillar-tag">Copywriting</span>
+                  <span class="pillar-tag">Community Management</span>
+                  <span class="pillar-tag">Platform Strategy</span>
+                  <span class="pillar-tag">Content Production</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pillar 02: Brand & Creative -->
+          <article class="pillar-card" id="pillar-02">
+            <button type="button" class="pillar-header-trigger" aria-expanded="false">
+              <span class="pillar-num">02</span>
+              <h3 class="pillar-title">BRAND &amp; CREATIVE</h3>
+              <p class="pillar-summary">
+                Crafting distinct visual languages, emotional resonance, and identity systems built for long-term category leadership.
+              </p>
+              <span class="pillar-chevron">↓</span>
+            </button>
+            <div class="pillar-drawer">
+              <div class="pillar-drawer-content">
+                <div class="pillar-drawer-meta">
+                  <h4>Strategic Narrative</h4>
+                  <p>
+                    Great brands aren’t assembled from random templates. We shape foundational brand identities that endure across every physical and digital touchpoint.
+                  </p>
+                  <button type="button" class="btn btn-outline-dark open-conversation-modal" style="padding: 8px 18px; font-size: 0.8rem;">
+                    <span>Discuss Brand Identity →</span>
+                  </button>
+                </div>
+                <div class="pillar-services-list">
+                  <span class="pillar-tag">Brand Strategy</span>
+                  <span class="pillar-tag">Brand Identity</span>
+                  <span class="pillar-tag">Visual Identity</span>
+                  <span class="pillar-tag">Campaign Concepts</span>
+                  <span class="pillar-tag">Creative Direction</span>
+                  <span class="pillar-tag">Graphic Design</span>
+                  <span class="pillar-tag">Brand Collateral</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pillar 03: Digital Growth -->
+          <article class="pillar-card" id="pillar-03">
+            <button type="button" class="pillar-header-trigger" aria-expanded="false">
+              <span class="pillar-num">03</span>
+              <h3 class="pillar-title">DIGITAL GROWTH</h3>
+              <p class="pillar-summary">
+                High-intent customer acquisition and algorithmic distribution that turns attention into verified commercial pipeline.
+              </p>
+              <span class="pillar-chevron">↓</span>
+            </button>
+            <div class="pillar-drawer">
+              <div class="pillar-drawer-content">
+                <div class="pillar-drawer-meta">
+                  <h4>Strategic Narrative</h4>
+                  <p>
+                    Performance without creative is expensive. Creative without distribution is invisible. We connect high-converting ad concepts with surgical media buying.
+                  </p>
+                  <button type="button" class="btn btn-outline-dark open-conversation-modal" style="padding: 8px 18px; font-size: 0.8rem;">
+                    <span>Scale Customer Acquisition →</span>
+                  </button>
+                </div>
+                <div class="pillar-services-list">
+                  <span class="pillar-tag">Performance Marketing</span>
+                  <span class="pillar-tag">Meta Ads (Instagram &amp; Facebook)</span>
+                  <span class="pillar-tag">Google Ads &amp; Search</span>
+                  <span class="pillar-tag">Lead Generation</span>
+                  <span class="pillar-tag">Campaign Optimization</span>
+                  <span class="pillar-tag">Audience Research</span>
+                  <span class="pillar-tag">Analytics &amp; Reporting</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pillar 04: PR & Communications -->
+          <article class="pillar-card" id="pillar-04">
+            <button type="button" class="pillar-header-trigger" aria-expanded="false">
+              <span class="pillar-num">04</span>
+              <h3 class="pillar-title">PR &amp; COMMUNICATIONS</h3>
+              <p class="pillar-summary">
+                Shaping public perception, narrative positioning, and earned authority across modern digital news channels.
+              </p>
+              <span class="pillar-chevron">↓</span>
+            </button>
+            <div class="pillar-drawer">
+              <div class="pillar-drawer-content">
+                <div class="pillar-drawer-meta">
+                  <h4>Strategic Narrative</h4>
+                  <p>
+                    In an era of endless sponsored messages, organic third-party credibility is the ultimate currency. We position founders and businesses at the center of industry dialogues.
+                  </p>
+                  <button type="button" class="btn btn-outline-dark open-conversation-modal" style="padding: 8px 18px; font-size: 0.8rem;">
+                    <span>Build Brand Authority →</span>
+                  </button>
+                </div>
+                <div class="pillar-services-list">
+                  <span class="pillar-tag">Digital PR</span>
+                  <span class="pillar-tag">Media Relations</span>
+                  <span class="pillar-tag">Brand Communication</span>
+                  <span class="pillar-tag">Press Releases</span>
+                  <span class="pillar-tag">Online Reputation</span>
+                  <span class="pillar-tag">Launch Communication</span>
+                  <span class="pillar-tag">Strategic Communications</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pillar 05: Influence & Campaigns -->
+          <article class="pillar-card" id="pillar-05">
+            <button type="button" class="pillar-header-trigger" aria-expanded="false">
+              <span class="pillar-num">05</span>
+              <h3 class="pillar-title">INFLUENCE &amp; CAMPAIGNS</h3>
+              <p class="pillar-summary">
+                Connecting brands with authentic cultural voices and creating memorable 360-degree experiential moments.
+              </p>
+              <span class="pillar-chevron">↓</span>
+            </button>
+            <div class="pillar-drawer">
+              <div class="pillar-drawer-content">
+                <div class="pillar-drawer-meta">
+                  <h4>Strategic Narrative</h4>
+                  <p>
+                    Beyond scripted endorsements: we orchestrate creator alignments and live brand events that generate sustained organic word-of-mouth.
+                  </p>
+                  <button type="button" class="btn btn-outline-dark open-conversation-modal" style="padding: 8px 18px; font-size: 0.8rem;">
+                    <span>Plan a Campaign Launch →</span>
+                  </button>
+                </div>
+                <div class="pillar-services-list">
+                  <span class="pillar-tag">Influencer Marketing</span>
+                  <span class="pillar-tag">Creator Collaborations</span>
+                  <span class="pillar-tag">Campaign Management</span>
+                  <span class="pillar-tag">Product Launches</span>
+                  <span class="pillar-tag">Event Marketing</span>
+                  <span class="pillar-tag">Experiential Campaigns</span>
+                  <span class="pillar-tag">Local/Regional Campaigns</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Cream to Dark Ink) -->
+    <div style="position: relative; width: 100%; height: 44px; background: #F4F1EA; overflow: hidden;">
+      <svg viewBox="0 0 1440 44" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,44 L0,12 Q120,32 300,10 T680,26 T1060,6 T1440,22 L1440,44 Z" fill="#060D20"/>
+        <line x1="0" y1="18" x2="1440" y2="18" stroke="#D4AF37" stroke-dasharray="3 6" stroke-opacity="0.35"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         "WHO WE WORK WITH" (MOVING EDITORIAL SECTOR STRIP)
+         ======================================================================== -->
+    <section class="who-we-work-with-section" id="sectors">
+      <div class="container">
+        <div class="categories-header">
+          <div class="eyebrow">SECTOR FOCUS</div>
+          <h2 class="section-title-large" style="margin-bottom: 1rem;">
+            BUILT FOR BUSINESSES <br>
+            <span class="text-gold-italic">WITH SOMETHING TO SAY.</span>
+          </h2>
+          <p style="color: rgba(250, 249, 245, 0.75); font-size: 1.05rem;">
+            We partner with ambitious enterprises and rising category challengers across diverse modern industries.
+          </p>
+        </div>
+
+        <!-- Scroll-Linked Moving Editorial Paper Strip -->
+        <div class="categories-strip-viewport" aria-label="Industries Strip">
+          <div class="categories-grid" id="sectorsStrip">
+            <div class="category-chip">Hospitality</div>
+            <div class="category-chip">Healthcare</div>
+            <div class="category-chip">Food &amp; Beverage</div>
+            <div class="category-chip">Real Estate</div>
+            <div class="category-chip">Startups</div>
+            <div class="category-chip">Lifestyle</div>
+            <div class="category-chip">Education</div>
+            <div class="category-chip">Retail</div>
+            <div class="category-chip">Events</div>
+            <div class="category-chip">Local Businesses</div>
+            <div class="category-chip">Professional Services</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         OUR APPROACH (CONNECTED PAPER STRIP TIMELINE)
+         ======================================================================== -->
+    <section class="approach-section section-spacing" id="approach">
+      <div class="paper-reg-mark mark-top-right" aria-hidden="true">✛</div>
+      <div class="container">
+        <div style="max-width: 760px;">
+          <div class="eyebrow">OUR METHODOLOGY</div>
+          <h2 class="section-title-large">
+            FROM IDEA <br>
+            <span class="text-gold-italic">TO IMPACT.</span>
+          </h2>
+          <p class="section-subtitle">
+            A battle-tested four-stage creative and operational sequence that replaces guesswork with strategic momentum.
+          </p>
+        </div>
+
+        <!-- Connected Physical Paper Strip Timeline -->
+        <div class="approach-timeline-strip" id="approachTimeline">
+          <!-- Animated Paper Line Progress Bar -->
+          <div class="approach-progress-track" aria-hidden="true">
+            <div class="approach-progress-fill" id="approachProgressFill"></div>
+          </div>
+
+          <!-- Stage 01: Discover -->
+          <div class="approach-step-card" data-step="1">
+            <span class="step-indicator">01</span>
+            <h3 class="step-title">DISCOVER</h3>
+            <p class="step-description">
+              Understand your business, audience, competition, positioning and goals. We uncover the core truth that differentiates your brand in a crowded market.
+            </p>
+          </div>
+
+          <!-- Stage 02: Strategize -->
+          <div class="approach-step-card" data-step="2">
+            <span class="step-indicator">02</span>
+            <h3 class="step-title">STRATEGIZE</h3>
+            <p class="step-description">
+              Build the creative and marketing roadmap around what actually matters. Prioritize channels, define message angles, and formulate distribution economics.
+            </p>
+          </div>
+
+          <!-- Stage 03: Create -->
+          <div class="approach-step-card" data-step="3">
+            <span class="step-indicator">03</span>
+            <h3 class="step-title">CREATE</h3>
+            <p class="step-description">
+              Develop content, campaigns, communication and creative assets. From high-fashion lookbooks to scroll-stopping short videos and editorial copy.
+            </p>
+          </div>
+
+          <!-- Stage 04: Amplify -->
+          <div class="approach-step-card" data-step="4">
+            <span class="step-indicator">04</span>
+            <h3 class="step-title">AMPLIFY</h3>
+            <p class="step-description">
+              Distribute, promote, measure, learn and continuously improve. Scale high-performing hooks and optimize creative frequency across paid and earned channels.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Midnight Blue to Cotton Off-White) -->
+    <div style="position: relative; width: 100%; height: 46px; background: var(--midnight-blue); overflow: hidden;">
+      <svg viewBox="0 0 1440 46" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,46 L0,16 Q160,36 340,12 T700,26 T1120,8 T1440,24 L1440,46 Z" fill="#FAF9F5"/>
+        <line x1="0" y1="20" x2="1440" y2="20" stroke="#D4AF37" stroke-dasharray="4 8" stroke-opacity="0.3"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         THE QV MEDIA DIFFERENCE (5 STRATEGIC PRINCIPLES)
+         ======================================================================== -->
+    <section class="difference-section section-spacing" id="difference">
+      <div class="container">
+        <div style="max-width: 820px;">
+          <div class="eyebrow" style="color: var(--midnight-blue);">THE PHILOSOPHY</div>
+          <h2 class="section-title-large" style="color: var(--midnight-blue);">
+            MORE THAN <br>
+            <span class="text-gold-italic">AN AGENCY.</span>
+          </h2>
+          <p class="section-subtitle text-muted-dark">
+            Why visionary founders and enterprise marketing leaders choose QV Media as their long-term creative and communications partner.
+          </p>
+        </div>
+
+        <div class="difference-grid">
+
+          <!-- Principle 1 -->
+          <div class="difference-card">
+            <div class="diff-index">01</div>
+            <div>
+              <h3 class="diff-title">Strategy Before Noise</h3>
+              <p class="diff-copy">
+                We don't create content just to fill a calendar. Every post, article, and campaign aligns with commercial goals and brand positioning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="difference-card">
+            <div class="diff-index">02</div>
+            <div>
+              <h3 class="diff-title">Creative With Purpose</h3>
+              <p class="diff-copy">
+                Every visual, campaign and story should have a clear reason to exist. Aesthetic excellence paired with sharp commercial instinct.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="difference-card">
+            <div class="diff-index">03</div>
+            <div>
+              <h3 class="diff-title">One Team, Not Ten Vendors</h3>
+              <p class="diff-copy">
+                Strategy, creative, content, marketing and communication work together under one synchronized roof. No misaligned silos or fragmented messaging.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class="difference-card">
+            <div class="diff-index">04</div>
+            <div>
+              <h3 class="diff-title">Data Meets Instinct</h3>
+              <p class="diff-copy">
+                We combine intuitive creative thinking with measurable quantitative performance. Intuition sparks the idea; real-world data proves the impact.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 5 -->
+          <div class="difference-card">
+            <div class="diff-index">05</div>
+            <div>
+              <h3 class="diff-title">Built Around Your Brand</h3>
+              <p class="diff-copy">
+                No recycled templates. No one-size-fits-all playbook. We build customized creative engines engineered specifically for your brand’s competitive landscape.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Cotton Off-White to Dark Ink) -->
+    <div style="position: relative; width: 100%; height: 48px; background: #FAF9F5; overflow: hidden;">
+      <svg viewBox="0 0 1440 48" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,48 L0,14 Q110,34 260,10 T600,28 T980,8 T1280,24 T1440,16 L1440,48 Z" fill="#060D20"/>
+        <line x1="0" y1="18" x2="1440" y2="18" stroke="#D4AF37" stroke-dasharray="3 6" stroke-opacity="0.35"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         WORK / CASE STUDIES (EDITORIAL PORTFOLIO — 4 COMPOSITIONS)
+         ======================================================================== -->
+    <section class="work-section section-spacing" id="work">
+      <!-- Print Shop Corner Alignment Mark -->
+      <div class="paper-reg-mark mark-top-left" aria-hidden="true">⌖</div>
+      <div class="container">
+        <!-- Section Header -->
+        <div class="work-header">
+          <div>
+            <div class="eyebrow">PORTFOLIO ARCHIVE</div>
+            <h2 class="section-title-large">
+              WORK THAT <br>
+              <span class="text-gold-italic">SPEAKS.</span>
+            </h2>
+          </div>
+          <p class="section-subtitle">
+            A curated look into our creative strategy and brand execution across diverse sectors. Explore how we transform ambitious concepts into memorable brand experiences.
+          </p>
+        </div>
+
+        <!-- Case Studies Stack -->
+        <div class="work-cases-stack">
+
+          <!-- Case Study 01: Split Editorial Layout -->
+          <article class="case-split-layout paper-portfolio-card" data-portfolio-index="1">
+            <div class="case-info">
+              <div class="case-tags">
+                <span class="paper-badge">[D2C LIFESTYLE &amp; APPAREL]</span>
+                <span class="paper-badge paper-badge-gold">BRAND &amp; CONTENT</span>
+              </div>
+              <h3 class="case-title">[CLIENT NAME]</h3>
+              
+              <div class="case-specs">
+                <div class="spec-item">
+                  <span class="spec-label">The Challenge</span>
+                  <span class="spec-value">[CLIENT CHALLENGE: Standing out in an overcrowded apparel market and building high organic retention without discounting margins.]</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">What QV Media Did</span>
+                  <span class="spec-value">[Full Visual Identity Overhaul, Editorial Lookbook Direction, High-Conversion Reels Series &amp; Micro-Influencer Seedings.]</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Measurable Outcome</span>
+                  <span class="spec-value text-gold">[RESULT / METRIC: XX% Surge in Direct Brand Recall &amp; Scale of Organic Repeat Purchases.]</span>
+                </div>
+              </div>
+
+              <div>
+                <button type="button" class="btn btn-outline-light open-conversation-modal">
+                  <span>Explore Case Study Details →</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Visual Preview with Physical Paper Tape & Cutout Frame -->
+            <div style="position: relative;">
+              <div class="paper-tape tape-top-center"></div>
+              <div class="paper-photo-frame paper-tilt-target" data-tilt-direction="positive">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="D2C Brand Campaign Showcase" loading="lazy">
+                <div class="paper-photo-caption">
+                  <span>[PROJECT ARCHIVE / LOOKBOOK 2026]</span>
+                  <span class="text-gold">[STUDIO SPEC]</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 02: Stacked Paper-Card Composition -->
+          <article class="case-stacked-layout paper-portfolio-card" data-portfolio-index="2">
+            <!-- Visual First on Stacked Layout -->
+            <div style="position: relative;">
+              <div class="paper-tape tape-top-left"></div>
+              <div class="paper-photo-frame paper-tilt-target" data-tilt-direction="negative" style="transform: rotate(-1.5deg);">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Hospitality &amp; Dining Campaign" loading="lazy">
+                <div class="paper-photo-caption">
+                  <span>[FLAGSHIP CULINARY DESTINATION]</span>
+                  <span class="text-gold">[EXPERIENTIAL]</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-info">
+              <div class="case-tags">
+                <span class="paper-badge">[HOSPITALITY &amp; F&amp;B]</span>
+                <span class="paper-badge paper-badge-gold">INFLUENCE &amp; PR</span>
+              </div>
+              <h3 class="case-title">[CLIENT NAME]</h3>
+              
+              <div class="case-specs">
+                <div class="spec-item">
+                  <span class="spec-label">The Challenge</span>
+                  <span class="spec-value">[CLIENT CHALLENGE: Launching a multi-city experiential dining concept with immediate waitlist traction from day one.]</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">What QV Media Did</span>
+                  <span class="spec-value">[VIP Launch Tasting Architecture, Food Creator Collaborations, Cinematic Short-Form Video Strategy &amp; Local Digital PR.]</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Measurable Outcome</span>
+                  <span class="spec-value text-gold">[RESULT / METRIC: XX+ Sold-Out Weekend Dinner Covers &amp; XXM+ Geo-Targeted Video Views.]</span>
+                </div>
+              </div>
+
+              <div>
+                <button type="button" class="btn btn-outline-light open-conversation-modal">
+                  <span>Explore Case Study Details →</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 03: Full-Width Editorial Hero Composition -->
+          <article class="case-fullwidth-layout paper-portfolio-card" data-portfolio-index="3">
+            <div class="case-fullwidth-grid">
+              <div class="case-info">
+                <div class="case-tags">
+                  <span class="paper-badge">[ENTERPRISE TECH &amp; FINTECH]</span>
+                  <span class="paper-badge paper-badge-gold">DIGITAL GROWTH &amp; PR</span>
+                </div>
+                <h3 class="case-title">[CLIENT NAME]</h3>
+                
+                <div class="case-specs">
+                  <div class="spec-item">
+                    <span class="spec-label">The Challenge</span>
+                    <span class="spec-value">[CLIENT CHALLENGE: Demystifying high-complexity software to generate enterprise sales demo requests.]</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">What QV Media Did</span>
+                    <span class="spec-value">[Founder Thought-Leadership Narrative, LinkedIn Organic Distribution, Targeted Paid Search &amp; Tier-1 Press Releases.]</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">Measurable Outcome</span>
+                    <span class="spec-value text-gold">[RESULT / METRIC: XX% Reduction in Cost-Per-Acquired Enterprise Lead.]</span>
+                  </div>
+                </div>
+
+                <div>
+                  <button type="button" class="btn btn-primary open-conversation-modal">
+                    <span>Discuss Similar Project →</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="case-fullwidth-image-banner paper-tilt-target" data-tilt-direction="positive">
+                <div class="paper-tape tape-top-right"></div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Tech Growth and Analytics Campaign" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+          <!-- Associated Ecosystem Project: Quick Venue -->
+          <article class="case-ecosystem-spotlight paper-portfolio-card" data-portfolio-index="4">
+            <div class="ecosystem-badge">
+              <span>ASSOCIATED ECOSYSTEM PROJECT • QUICK VENUE</span>
+            </div>
+            <div class="case-fullwidth-grid">
+              <div class="case-info">
+                <h3 class="case-title" style="color: var(--paper-white);">QUICK VENUE</h3>
+                <p style="color: rgba(250, 249, 245, 0.85); font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                  Experiential venue platform and event technology ecosystem. QV Media developed the core brand identity system, event marketing collateral, launch communication architecture, and multi-channel partner acquisition creative.
+                </p>
+                <div class="case-specs" style="border-left-color: var(--gold);">
+                  <div class="spec-item">
+                    <span class="spec-label">Agency Scope</span>
+                    <span class="spec-value">Brand Positioning, UI/UX Direction, Event Marketing, Regional Launch Campaigns &amp; Content Architecture.</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">Project Status</span>
+                    <span class="spec-value text-gold">Active Ecosystem Platform &amp; Ongoing Strategic Creative Collaboration.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="position: relative;">
+                <div class="paper-photo-frame paper-tilt-target" data-tilt-direction="subtle" style="transform: rotate(1deg);">
+                  <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" alt="Quick Venue Event Experience Platform" loading="lazy">
+                  <div class="paper-photo-caption">
+                    <span>QUICK VENUE ECOSYSTEM</span>
+                    <span class="text-gold">INTEGRATED CASE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         RESULTS / PROOF SECTION (EDITABLE METRICS)
+         ======================================================================== -->
+    <section class="proof-section section-spacing" id="results">
+      <div class="container">
+        <div class="proof-header">
+          <div class="eyebrow">VERIFIED PERFORMANCE</div>
+          <h2 class="section-title-large">
+            CREATIVE IS GOOD. <br>
+            <span class="text-gold-italic">MEASURABLE CREATIVE IS BETTER.</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            We believe aesthetic execution must correlate with commercial traction. Here is how our creative frameworks deliver real-world outcomes.
+          </p>
+        </div>
+
+        <!-- Editable Metrics Grid -->
+        <div class="proof-metrics-grid">
+          <!-- Metric 1 -->
+          <div class="metric-paper-card ink-stamp-card" data-stamp-delay="0">
+            <div class="metric-value ink-stamp-value">[XX+]</div>
+            <div class="metric-label">Campaigns / Projects</div>
+            <div class="metric-sub">Executed across core pillars</div>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="metric-paper-card ink-stamp-card" data-stamp-delay="150">
+            <div class="metric-value ink-stamp-value">[XX+]</div>
+            <div class="metric-label">Brands Supported</div>
+            <div class="metric-sub">From startups to legacy brands</div>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="metric-paper-card ink-stamp-card" data-stamp-delay="300">
+            <div class="metric-value ink-stamp-value">[XX+]</div>
+            <div class="metric-label">Content Pieces Created</div>
+            <div class="metric-sub">Reels, copy, lookbooks &amp; ads</div>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="metric-paper-card ink-stamp-card" data-stamp-delay="450">
+            <div class="metric-value ink-stamp-value">[XX%]</div>
+            <div class="metric-label">Average Growth</div>
+            <div class="metric-sub">In customer engagement &amp; reach</div>
+          </div>
+        </div>
+
+        <p class="proof-disclaimer">
+          *Note: All metric figures above are clearly marked editable placeholders awaiting verified client project data.
+        </p>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <div class="statement-punch-box" style="background: rgba(6, 13, 32, 0.8); border-color: var(--gold);">
+            <span class="statement-punch-text" style="color: var(--gold);">GOOD CONTENT GETS SEEN. GREAT CONTENT GETS REMEMBERED.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Midnight Blue to Cotton Off-White) -->
+    <div style="position: relative; width: 100%; height: 46px; background: var(--midnight-blue); overflow: hidden;">
+      <svg viewBox="0 0 1440 46" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,46 L0,16 Q130,36 310,12 T670,26 T1080,8 T1440,22 L1440,46 Z" fill="#FAF9F5"/>
+        <line x1="0" y1="20" x2="1440" y2="20" stroke="#D4AF37" stroke-dasharray="4 8" stroke-opacity="0.3"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         TESTIMONIALS SECTION (ELEGANT QUOTATION CARDS)
+         ======================================================================== -->
+    <section class="testimonials-section section-spacing" id="testimonials">
+      <div class="container">
+        <div class="testimonials-header">
+          <div class="eyebrow" style="color: var(--midnight-blue);">CLIENT VOICES</div>
+          <h2 class="section-title-large" style="color: var(--midnight-blue);">
+            DON'T TAKE <br>
+            <span class="text-gold-italic">OUR WORD FOR IT.</span>
+          </h2>
+          <p class="section-subtitle text-muted-dark" style="margin: 0 auto;">
+            What founders and marketing decision-makers say about partnering with QV Media.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <!-- Testimonial 01 -->
+          <div class="testimonial-paper-card paper-quote-card" data-quote-index="1">
+            <div>
+              <div class="quote-mark">“</div>
+              <p class="testimonial-text">
+                “[CLIENT TESTIMONIAL GOES HERE. Editable testimonial placeholder showcasing how QV Media transformed the brand narrative, revitalized our content cadence, and aligned creative output with commercial growth.]”
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar-placeholder">CN</div>
+              <div class="client-meta">
+                <span class="client-name">[CLIENT NAME]</span>
+                <span class="client-role">[DESIGNATION], [COMPANY] • Luxury Retail</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 02 -->
+          <div class="testimonial-paper-card paper-quote-card" data-quote-index="2">
+            <div>
+              <div class="quote-mark">“</div>
+              <p class="testimonial-text">
+                “[CLIENT TESTIMONIAL GOES HERE. Editable testimonial placeholder highlighting the speed, strategic intelligence, and photographic production quality delivered across our multi-city campaign.]”
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar-placeholder">CN</div>
+              <div class="client-meta">
+                <span class="client-name">[CLIENT NAME]</span>
+                <span class="client-role">[DESIGNATION], [COMPANY] • Hospitality Group</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 03 -->
+          <div class="testimonial-paper-card paper-quote-card" data-quote-index="3">
+            <div>
+              <div class="quote-mark">“</div>
+              <p class="testimonial-text">
+                “[CLIENT TESTIMONIAL GOES HERE. Editable testimonial placeholder detailing how their performance marketing and digital PR strategies drove qualified enterprise inbound leads.]”
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar-placeholder">CN</div>
+              <div class="client-meta">
+                <span class="client-name">[CLIENT NAME]</span>
+                <span class="client-role">[DESIGNATION], [COMPANY] • Tech Platform</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Cotton Off-White to Cream) -->
+    <div style="position: relative; width: 100%; height: 38px; background: #FAF9F5; overflow: hidden;">
+      <svg viewBox="0 0 1440 38" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,38 L0,14 Q140,28 320,10 T720,24 T1100,8 T1440,20 L1440,38 Z" fill="#F4F1EA"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         ABOUT QV MEDIA & THE PEOPLE BEHIND THE WORK
+         ======================================================================== -->
+    <section class="about-section section-spacing" id="about">
+      <div class="paper-reg-mark mark-bottom-right" aria-hidden="true">✛</div>
+      <div class="container">
+        <div class="about-editorial-grid">
+          <!-- Left Column: Editorial Photo Collage -->
+          <div class="about-visual-collage">
+            <div class="about-photo-primary" data-paper-depth="0.3">
+              <div class="paper-tape tape-top-center"></div>
+              <div class="paper-photo-frame" style="height: 100%;">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="QV Media Creative Studio Team Collaboration" style="height: calc(100% - 30px);" loading="lazy">
+                <div class="paper-photo-caption">
+                  <span>QV STUDIO SESSIONS</span>
+                  <span class="text-gold">WAR ROOM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-photo-secondary" data-paper-depth="0.65">
+              <div class="paper-tape tape-top-right"></div>
+              <div class="paper-photo-frame" style="height: 100%;">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="Design Layout Review and Typographic Craft" style="height: calc(100% - 30px);" loading="lazy">
+                <div class="paper-photo-caption">
+                  <span>PRINT &amp; EDITORIAL</span>
+                  <span class="text-gold">CRAFT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Narrative -->
+          <div class="about-text-content">
+            <div class="eyebrow" style="color: var(--midnight-blue);">ABOUT QV MEDIA</div>
+            <h2>THE PEOPLE BEHIND <br><span class="text-gold-italic">THE WORK.</span></h2>
+            
+            <div class="about-belief-quote">
+              “QV Media was built around a simple belief: businesses don't need more noise. They need better ideas, better stories and better execution.”
+            </div>
+
+            <p class="about-body-copy">
+              We are a young, ambitious, strategy-led creative agency built for the contemporary Indian and global market. We reject the fragmented model where you hire one agency for reels, another for Google ads, a third for PR, and a freelance designer for your logos.
+            </p>
+
+            <p class="about-body-copy">
+              At QV Media, strategic vision and tactile execution live in the same room. We operate as an extension of your leadership team — obsessing over the details, defending your brand integrity, and translating your commercial ambitions into creative campaigns people remember.
+            </p>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <span class="editorial-stamp editorial-stamp-dark">Strategy</span>
+              <span class="editorial-stamp editorial-stamp-dark">Creative</span>
+              <span class="editorial-stamp editorial-stamp-dark">Digital Growth</span>
+              <span class="editorial-stamp editorial-stamp-dark">PR</span>
+              <span class="editorial-stamp editorial-stamp-dark">Content</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Human Element / Creative Disciplines (Sophisticated Paper-Cut Placeholders) -->
+        <div>
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.6rem; text-transform: uppercase; color: var(--midnight-blue);">
+              OUR CORE DISCIPLINES &amp; CRAFT LEADERS
+            </h3>
+          </div>
+
+          <div class="team-disciplines-grid">
+            <!-- Discipline 1 -->
+            <div class="discipline-card paper-craft-card">
+              <div class="discipline-icon-cutout">✦</div>
+              <h4 class="discipline-title">Creative Direction</h4>
+              <p class="discipline-strength">
+                Translates abstract business visions into commanding visual identities, high-concept lookbooks, and unforgettable campaigns.
+              </p>
+            </div>
+
+            <!-- Discipline 2 -->
+            <div class="discipline-card paper-craft-card">
+              <div class="discipline-icon-cutout">▲</div>
+              <h4 class="discipline-title">Brand Strategy &amp; Comms</h4>
+              <p class="discipline-strength">
+                Unpacks audience psychology, category white-spaces, and earned digital PR narratives that position brands as industry authorities.
+              </p>
+            </div>
+
+            <!-- Discipline 3 -->
+            <div class="discipline-card paper-craft-card">
+              <div class="discipline-icon-cutout">●</div>
+              <h4 class="discipline-title">Content &amp; Film</h4>
+              <p class="discipline-strength">
+                Directs cinematic short-form video, high-impact reels, editorial copywriting, and community-first storytelling.
+              </p>
+            </div>
+
+            <!-- Discipline 4 -->
+            <div class="discipline-card paper-craft-card">
+              <div class="discipline-icon-cutout">■</div>
+              <h4 class="discipline-title">Performance &amp; Media</h4>
+              <p class="discipline-strength">
+                Masters algorithmic media buying across Meta and Google, optimizing funnel velocity and maximizing acquisition return.
+              </p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 3.5rem;">
+            <div class="statement-punch-box">
+              <span class="statement-punch-text">MAKE NOISE. BUT MAKE IT MEAN SOMETHING.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Torn Paper Edge SVG Divider (Cream to Midnight Blue) -->
+    <div style="position: relative; width: 100%; height: 44px; background: #F4F1EA; overflow: hidden;">
+      <svg viewBox="0 0 1440 44" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <path d="M0,44 L0,12 Q120,32 300,10 T680,26 T1060,6 T1440,22 L1440,44 Z" fill="#012775"/>
+        <line x1="0" y1="18" x2="1440" y2="18" stroke="#D4AF37" stroke-dasharray="3 6" stroke-opacity="0.35"/>
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+         INSIGHT / FREE BRAND AUDIT CTA SECTION (CONVERSION ENGINE)
+         ======================================================================== -->
+    <section class="audit-cta-section section-spacing" id="audit">
+      <div class="container">
+        <div class="audit-card-wrapper">
+          <div class="audit-content">
+            <div class="eyebrow">STRATEGIC OPPORTUNITY</div>
+            <h2>THINK YOUR BRAND <br>COULD DO MORE?</h2>
+            <div class="audit-subtitle">We'll show you where.</div>
+            <p class="audit-description">
+              We review your current digital presence, identify missed opportunities, and share practical recommendations for improving your brand, content and marketing. No automated reports. No generic templates. Real feedback from creative strategists.
+            </p>
+          </div>
+
+          <div class="audit-action-box">
+            <button type="button" class="btn btn-gold open-audit-modal" style="width: 100%; padding: 18px 32px; font-size: 1rem;">
+              <span>Request a Free Brand Audit</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <div style="display: flex; align-items: center; gap: 8px; color: rgba(250, 249, 245, 0.7); font-size: 0.85rem;">
+              <span>✓ 48-Hour Turnaround</span>
+              <span>•</span>
+              <span>✓ Actionable Insights</span>
+              <span>•</span>
+              <span>✓ Zero Obligation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CONTACT SECTION
+         ======================================================================== -->
+    <section class="contact-section section-spacing" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left Column: Dramatic Final Statement & Contact Placeholders -->
+          <div>
+            <div class="eyebrow">INITIATE COLLABORATION</div>
+            <h2 class="contact-headline">
+              LET'S MAKE <br>
+              <span class="text-gold-italic">SOMETHING</span> <br>
+              MATTER.
+            </h2>
+            <p class="contact-subtext">
+              Have a brand to build, campaign to launch or story to tell? Let's talk. Whether you are ready to scale or looking for strategic direction, we are here.
+            </p>
+
+            <!-- Editable Contact Placeholders -->
+            <div class="contact-placeholders-list">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">✉</div>
+                <div>
+                  <span class="contact-info-label">Direct Inquiries</span>
+                  <span class="contact-info-val">[EMAIL]</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">💬</div>
+                <div>
+                  <span class="contact-info-label">WhatsApp Channel</span>
+                  <span class="contact-info-val">[WHATSAPP]</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">📸</div>
+                <div>
+                  <span class="contact-info-label">Instagram Feed</span>
+                  <span class="contact-info-val">[@QVMEDIA]</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">🌐</div>
+                <div>
+                  <span class="contact-info-label">Official Domain</span>
+                  <span class="contact-info-val">[WEBSITE]</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Secondary CTA -->
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+                <span>WhatsApp Us</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <button type="button" class="btn btn-outline-light open-audit-modal">
+                <span>Free Brand Audit</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Direct Inquiry Form -->
+          <div class="contact-form-card">
+            <h3 class="contact-form-title">Start a Conversation</h3>
+            <form id="mainContactForm">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name / Title</label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Aditi Sharma, Founder" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Work Email / WhatsApp</label>
+                <input type="text" id="contactEmail" name="email" autocomplete="email" class="form-control" placeholder="name@company.com or +91..." required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactBrand" class="form-label">Brand or Business Name</label>
+                <input type="text" id="contactBrand" name="brand" class="form-control" placeholder="e.g. Maison Collective" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactService" class="form-label">Primary Interest</label>
+                <select id="contactService" name="service" class="form-control" style="background-color: #0c183a;">
+                  <option value="Full Agency Partnership">Full Agency Partnership (360° Retainer)</option>
+                  <option value="Social & Content Production">Social &amp; Content Production</option>
+                  <option value="Brand Identity & Creative Direction">Brand Identity &amp; Creative Direction</option>
+                  <option value="Performance & Digital Growth">Performance Marketing &amp; Digital Growth</option>
+                  <option value="PR & Launch Campaign">PR &amp; Launch Campaign</option>
+                  <option value="Other Inquiries">Other / Exploring Possibilities</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Tell Us About Your Brand &amp; Goals</label>
+                <textarea id="contactMessage" name="message" class="form-control" placeholder="What are you building? What is your biggest challenge right now?" rows="4"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">
+                <span>Send Message to QV Studio</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <img src="icon.png" alt="QV Media" width="28" height="28" style="object-fit: contain;">
+            <h3 style="margin: 0;">QV MEDIA</h3>
+          </div>
+          <p>Creative Marketing &amp; Communications Agency</p>
+          <div style="max-width: 360px; font-size: 0.85rem; line-height: 1.6; color: rgba(250, 249, 245, 0.6);">
+            A strategic creative partner for ambitious businesses. Built around the belief that brands don't need more noise — they need better ideas and execution.
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <div class="footer-links-list">
+            <a href="#work">Work Archive</a>
+            <a href="#services">Strategic Pillars</a>
+            <a href="#approach">Our Approach</a>
+            <a href="#difference">Why QV Media</a>
+            <a href="#about">About the Team</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <div class="footer-links-list">
+            <a href="#" target="_blank" rel="noopener noreferrer">Instagram [@QVMEDIA]</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn [QV Media]</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a>
+            <a href="#audit" class="open-audit-modal text-gold">Free Brand Audit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 QV Media. All rights reserved.
+        </div>
+        <div>
+          <a href="#hero" class="back-to-top">
+            <span>Back to Top</span>
+            <span>↑</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL 1: FREE BRAND AUDIT REQUEST
+       ======================================================================== -->
+  <div class="modal-overlay" id="auditModal" role="dialog" aria-modal="true" aria-labelledby="auditModalTitle">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="eyebrow" style="color: var(--midnight-blue); margin-bottom: 0.5rem;">QV STRATEGIC REVIEW</div>
+      <h3 id="auditModalTitle">Request a Free Brand Audit</h3>
+      <p>
+        Share your brand details below. Our creative strategy team will conduct a thorough review of your digital presence, messaging, and missed opportunities.
+      </p>
+
+      <form id="brandAuditForm">
+        <div class="form-group">
+          <label for="auditBrandName" class="form-label">Brand / Business Name</label>
+          <input type="text" id="auditBrandName" name="brandName" class="form-control" placeholder="e.g. Saffron &amp; Sage" required>
+        </div>
+
+        <div class="form-group">
+          <label for="auditUrl" class="form-label">Website or Instagram Handle</label>
+          <input type="text" id="auditUrl" name="brandUrl" class="form-control" placeholder="e.g. instagram.com/yourbrand or www.yourbrand.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="auditCategory" class="form-label">Industry Sector</label>
+          <select id="auditCategory" name="category" class="form-control">
+            <option value="Hospitality / F&B">Hospitality / Food &amp; Beverage</option>
+            <option value="D2C / Lifestyle / Retail">D2C / Lifestyle / Retail</option>
+            <option value="Healthcare / Wellness">Healthcare / Wellness</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Startups / Tech">Startups / Technology</option>
+            <option value="Professional Services">Professional Services</option>
+            <option value="Other">Other Industry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="auditGoal" class="form-label">Biggest Current Challenge</label>
+          <select id="auditGoal" name="challenge" class="form-control">
+            <option value="Content engagement is low">Content engagement is stagnant / low</option>
+            <option value="Need a complete brand identity revamp">Need a complete brand identity revamp</option>
+            <option value="Ad acquisition costs are too high">Ad customer acquisition costs are too high</option>
+            <option value="Lack of PR and earned media authority">Lack of PR and earned media authority</option>
+            <option value="Need a multi-channel campaign launch">Need an integrated campaign launch</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="auditContact" class="form-label">Where should we send your audit?</label>
+          <input type="text" id="auditContact" name="contact" class="form-control" placeholder="Work Email or WhatsApp Number" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 15px;">
+          <span>Submit Audit Request</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: START A CONVERSATION
+       ======================================================================== -->
+  <div class="modal-overlay" id="conversationModal" role="dialog" aria-modal="true" aria-labelledby="convoModalTitle">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="eyebrow" style="color: var(--midnight-blue); margin-bottom: 0.5rem;">QV STUDIO INTAKE</div>
+      <h3 id="convoModalTitle">Start a Conversation</h3>
+      <p>
+        Tell us about the project you are planning or the brand you want to elevate. We typically respond within 24 hours.
+      </p>
+
+      <form id="conversationForm">
+        <div class="form-group">
+          <label for="convoClientName" class="form-label">Your Name</label>
+          <input type="text" id="convoClientName" name="clientName" class="form-control" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="convoBrand" class="form-label">Company / Brand</label>
+          <input type="text" id="convoBrand" name="brand" class="form-control" placeholder="Your company or project name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="convoContact" class="form-label">Email or Phone / WhatsApp</label>
+          <input type="text" id="convoContact" name="contact" class="form-control" placeholder="Where can we reach you?" required>
+        </div>
+
+        <div class="form-group">
+          <label for="convoBrief" class="form-label">Project Brief / Summary</label>
+          <textarea id="convoBrief" name="brief" class="form-control" placeholder="Briefly describe what you're looking for..." rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 15px;">
+          <span>Send Inquiry</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
