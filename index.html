@@ -1206,15 +1206,23 @@
           <!-- Right Column: Interactive Direct Inquiry Form -->
           <div class="contact-form-card">
             <h3 class="contact-form-title">Start a Conversation</h3>
-            <form id="mainContactForm">
+            <form id="mainContactForm" action="https://formsubmit.co/qvmedia.in@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              
               <div class="form-group">
                 <label for="contactName" class="form-label">Your Name / Title</label>
                 <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Aditi Sharma, Founder" required>
               </div>
 
               <div class="form-group">
-                <label for="contactEmail" class="form-label">Work Email / WhatsApp</label>
-                <input type="text" id="contactEmail" name="email" autocomplete="email" class="form-control" placeholder="name@company.com or +91..." required>
+                <label for="contactEmail" class="form-label">Work Email</label>
+                <input type="email" id="contactEmail" name="email" autocomplete="email" class="form-control" placeholder="name@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone" class="form-label">Phone Number / WhatsApp</label>
+                <input type="tel" id="contactPhone" name="phone" autocomplete="tel" class="form-control" placeholder="+91 98012 80723" required>
               </div>
 
               <div class="form-group">
@@ -1316,7 +1324,9 @@
         Share your brand details below. Our creative strategy team will conduct a thorough review of your digital presence, messaging, and missed opportunities.
       </p>
 
-      <form id="brandAuditForm">
+      <form id="brandAuditForm" action="https://formsubmit.co/qvmedia.in@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <div class="form-group">
           <label for="auditBrandName" class="form-label">Brand / Business Name</label>
           <input type="text" id="auditBrandName" name="brandName" class="form-control" placeholder="e.g. Saffron &amp; Sage" required>
@@ -1376,7 +1386,9 @@
         Tell us about the project you are planning or the brand you want to elevate. We typically respond within 24 hours.
       </p>
 
-      <form id="conversationForm">
+      <form id="conversationForm" action="https://formsubmit.co/qvmedia.in@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <div class="form-group">
           <label for="convoClientName" class="form-label">Your Name</label>
           <input type="text" id="convoClientName" name="clientName" class="form-control" placeholder="Your full name" required>

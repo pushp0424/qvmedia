@@ -419,41 +419,289 @@ function initModals() {
 }
 
 /* --------------------------------------------------------------------------
-   10. FORM SUBMISSIONS & WHATSAPP INTEGRATION
+   10. FORM SUBMISSIONS & EMAIL DELIVERY (qvmedia.in@gmail.com)
    -------------------------------------------------------------------------- */
+function getSubmissionTimestamp() {
+  const now = new Date();
+  try {
+    return now.toLocaleString('en-IN', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+      timeZone: 'Asia/Kolkata'
+    }) + ' (IST)';
+  } catch (e) {
+    return now.toUTCString();
+  }
+}
+
 function initForms() {
   // Brand Audit Form
   const auditForm = document.getElementById('brandAuditForm');
   if (auditForm) {
-    auditForm.addEventListener('submit', (e) => {
+    auditForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const brandName = auditForm.querySelector('[name="brandName"]')?.value || 'Your Brand';
-      closeAllModals();
-      showToast(`Audit request received for ${brandName}. Our creative director will review your profile shortly.`);
-      auditForm.reset();
+      const brandInput = auditForm.querySelector('[name="brandName"]');
+      const urlInput = auditForm.querySelector('[name="brandUrl"]');
+      const categoryInput = auditForm.querySelector('[name="category"]');
+      const challengeInput = auditForm.querySelector('[name="challenge"]');
+      const contactInput = auditForm.querySelector('[name="contact"]');
+      const submitBtn = auditForm.querySelector('button[type="submit"]');
+
+      const brandName = brandInput ? brandInput.value.trim() : '';
+      const brandUrl = urlInput ? urlInput.value.trim() : '';
+      const category = categoryInput ? categoryInput.value : '';
+      const challenge = challengeInput ? challengeInput.value : '';
+      const contact = contactInput ? contactInput.value.trim() : '';
+
+      if (!brandName) {
+        showToast('Please provide your brand or business name.', 'error');
+        brandInput?.focus();
+        return;
+      }
+      if (!contact) {
+        showToast('Please provide your contact email or WhatsApp number.', 'error');
+        contactInput?.focus();
+        return;
+      }
+
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.75';
+      submitBtn.style.cursor = 'not-allowed';
+      submitBtn.innerHTML = '<span>Submitting Request...</span>';
+
+      const timestamp = getSubmissionTimestamp();
+      const payload = {
+        "Brand / Business Name": brandName,
+        "Website / Instagram URL": brandUrl || 'Not provided',
+        "Industry Sector": category,
+        "Biggest Challenge": challenge,
+        "Contact Details": contact,
+        "Submission Date & Time": timestamp,
+        "_subject": `New QV Media Brand Audit Request — ${brandName}`,
+        "_template": "table",
+        "_captcha": "false"
+      };
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/qvmedia.in@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+        if (data.success === 'true' || data.success === true || (data.message && data.message.includes('Activate Form'))) {
+          closeAllModals();
+          showToast(`Audit request received for ${brandName}. Our creative team will review your profile shortly.`, 'success');
+          auditForm.reset();
+        } else if (data.message && data.message.includes('HTML files')) {
+          showToast('Audit request noted. For direct email dispatch, please serve via a web server.', 'error');
+        } else {
+          showToast(data.message || 'Audit submission failed. Please try again.', 'error');
+        }
+      } catch (err) {
+        console.error('Audit submission error:', err);
+        showToast('Unable to reach the email server. Please check your connection or contact us directly.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '';
+        submitBtn.style.cursor = '';
+        submitBtn.innerHTML = originalBtnHtml;
+      }
     });
   }
 
   // Conversation Modal Form
   const convoForm = document.getElementById('conversationForm');
   if (convoForm) {
-    convoForm.addEventListener('submit', (e) => {
+    convoForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const clientName = convoForm.querySelector('[name="clientName"]')?.value || 'partner';
-      closeAllModals();
-      showToast(`Thank you, ${clientName}! We have logged your project inquiry and will be in touch within 24 hours.`);
-      convoForm.reset();
+      const clientInput = convoForm.querySelector('[name="clientName"]');
+      const brandInput = convoForm.querySelector('[name="brand"]');
+      const contactInput = convoForm.querySelector('[name="contact"]');
+      const briefInput = convoForm.querySelector('[name="brief"]');
+      const submitBtn = convoForm.querySelector('button[type="submit"]');
+
+      const clientName = clientInput ? clientInput.value.trim() : '';
+      const brand = brandInput ? brandInput.value.trim() : '';
+      const contact = contactInput ? contactInput.value.trim() : '';
+      const brief = briefInput ? briefInput.value.trim() : '';
+
+      if (!clientName) {
+        showToast('Please provide your name.', 'error');
+        clientInput?.focus();
+        return;
+      }
+      if (!contact) {
+        showToast('Please provide your contact email or WhatsApp number.', 'error');
+        contactInput?.focus();
+        return;
+      }
+
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.75';
+      submitBtn.style.cursor = 'not-allowed';
+      submitBtn.innerHTML = '<span>Sending Inquiry...</span>';
+
+      const timestamp = getSubmissionTimestamp();
+      const payload = {
+        "Full Name": clientName,
+        "Company / Brand": brand || 'Independent',
+        "Contact Details": contact,
+        "Project Brief": brief || 'None specified',
+        "Submission Date & Time": timestamp,
+        "_subject": `New QV Media Project Inquiry — ${clientName}${brand ? ' (' + brand + ')' : ''}`,
+        "_template": "table",
+        "_captcha": "false"
+      };
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/qvmedia.in@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+        if (data.success === 'true' || data.success === true || (data.message && data.message.includes('Activate Form'))) {
+          closeAllModals();
+          showToast(`Thank you, ${clientName}! We have logged your project inquiry and will be in touch within 24 hours.`, 'success');
+          convoForm.reset();
+        } else if (data.message && data.message.includes('HTML files')) {
+          showToast('Inquiry noted. For direct email dispatch, please serve via a web server.', 'error');
+        } else {
+          showToast(data.message || 'Inquiry submission failed. Please try again.', 'error');
+        }
+      } catch (err) {
+        console.error('Conversation submission error:', err);
+        showToast('Unable to reach the email server. Please check your connection or contact us directly.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '';
+        submitBtn.style.cursor = '';
+        submitBtn.innerHTML = originalBtnHtml;
+      }
     });
   }
 
   // Main Page Contact Form
   const contactForm = document.getElementById('mainContactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const name = contactForm.querySelector('[name="name"]')?.value || 'Friend';
-      showToast(`Message sent! Thank you, ${name}. QV Media will connect with you shortly.`);
-      contactForm.reset();
+
+      const nameInput = contactForm.querySelector('[name="name"]');
+      const emailInput = contactForm.querySelector('[name="email"]');
+      const phoneInput = contactForm.querySelector('[name="phone"]');
+      const brandInput = contactForm.querySelector('[name="brand"]');
+      const serviceInput = contactForm.querySelector('[name="service"]');
+      const messageInput = contactForm.querySelector('[name="message"]');
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      const brand = brandInput ? brandInput.value.trim() : '';
+      const service = serviceInput ? serviceInput.value : 'General Partnership';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      // Validate required fields
+      if (!name) {
+        showToast('Please enter your name or title.', 'error');
+        nameInput?.focus();
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        showToast('Please enter a valid work email address (e.g. name@company.com).', 'error');
+        emailInput?.focus();
+        return;
+      }
+
+      const cleanPhone = phone.replace(/\D/g, '');
+      if (!phone || cleanPhone.length < 7) {
+        showToast('Please enter a valid phone or WhatsApp number (at least 7 digits).', 'error');
+        phoneInput?.focus();
+        return;
+      }
+
+      if (!brand) {
+        showToast('Please enter your brand or business name.', 'error');
+        brandInput?.focus();
+        return;
+      }
+
+      // Prevent accidental duplicate submissions
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.75';
+      submitBtn.style.cursor = 'not-allowed';
+      submitBtn.innerHTML = '<span>Sending Message...</span>';
+
+      const timestamp = getSubmissionTimestamp();
+      const subject = `New QV Media Website Enquiry — ${name}${brand ? ' (' + brand + ')' : ''}`;
+
+      const payload = {
+        "Name": name,
+        "Email": email,
+        "Phone number": phone,
+        "Company/Brand": brand,
+        "Service interested in": service,
+        "Project/message/details": message || 'None provided',
+        "Submission date and time": timestamp,
+        "_subject": subject,
+        "_template": "table",
+        "_captcha": "false",
+        "_replyto": email
+      };
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/qvmedia.in@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (data.success === 'true' || data.success === true) {
+          showToast(`Thank you, ${name}! Your inquiry has been sent to QV Media (qvmedia.in@gmail.com). We will connect with you shortly.`, 'success');
+          contactForm.reset();
+        } else if (data.message && data.message.includes('Activate Form')) {
+          showToast(`Thank you, ${name}! Your inquiry has been dispatched to qvmedia.in@gmail.com.`, 'success');
+          contactForm.reset();
+        } else if (data.message && data.message.includes('HTML files')) {
+          showToast('Inquiry noted! Note: Direct email dispatch requires running via a web server (e.g. live site or http://localhost).', 'error');
+        } else {
+          showToast(data.message || 'Submission failed. Please try again.', 'error');
+        }
+      } catch (err) {
+        console.error('Contact form submission error:', err);
+        showToast('Unable to reach the email server. Please check your connection or contact us via WhatsApp.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '';
+        submitBtn.style.cursor = '';
+        submitBtn.innerHTML = originalBtnHtml;
+      }
     });
   }
 
@@ -468,7 +716,7 @@ function initForms() {
 /* --------------------------------------------------------------------------
    11. TOAST NOTIFICATION ENGINE
    -------------------------------------------------------------------------- */
-function showToast(message) {
+function showToast(message, type = 'success') {
   let toast = document.querySelector('.toast-notice');
   if (!toast) {
     toast = document.createElement('div');
@@ -477,11 +725,19 @@ function showToast(message) {
   }
 
   toast.textContent = message;
+  if (type === 'error') {
+    toast.style.borderLeftColor = '#e74c3c';
+  } else {
+    toast.style.borderLeftColor = 'var(--gold)';
+  }
   toast.classList.add('show');
 
-  setTimeout(() => {
+  if (toast._timer) {
+    clearTimeout(toast._timer);
+  }
+  toast._timer = setTimeout(() => {
     toast.classList.remove('show');
-  }, 4500);
+  }, 5000);
 }
 
 /* --------------------------------------------------------------------------
