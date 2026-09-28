@@ -2024,6 +2024,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--paper-cotton);
 }
 
+.contact-actions-wrap {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
 /* Contact Form Card */
 .contact-form-card {
   background: rgba(1, 39, 117, 0.35);
@@ -2537,12 +2543,14 @@ textarea.form-control {
     gap: 1.25rem;
   }
   .pillar-header-trigger {
-    grid-template-columns: 32px minmax(0, 1fr) 32px;
-    gap: 0.75rem;
-    padding: 1rem 0.85rem;
+    grid-template-columns: 36px minmax(0, 1fr) 32px;
+    gap: 1rem;
+    padding: 1.15rem 0.95rem;
   }
   .pillar-num {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
+    min-width: 32px;
+    letter-spacing: 0.04em;
   }
   .pillar-title {
     font-size: clamp(1rem, 4vw, 1.25rem);
@@ -2705,6 +2713,17 @@ textarea.form-control {
   }
   .contact-placeholders-list {
     margin-bottom: 2rem;
+  }
+  .contact-actions-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  .contact-actions-wrap .btn {
+    width: 100%;
+    text-align: center;
   }
   .contact-form-card {
     padding: 1.75rem 1.25rem;
@@ -4559,7 +4578,7 @@ section:hover .paper-reg-mark {
             </div>
 
             <!-- WhatsApp Secondary CTA -->
-            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <div class="contact-actions-wrap">
               <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
                 <span>WhatsApp Us</span>
                 <span class="btn-arrow">→</span>
