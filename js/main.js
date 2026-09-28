@@ -234,19 +234,7 @@ function initScrollPhysicsEngine() {
       });
     }
 
-    // 3. "Who We Work With" — Moving Editorial Sector Strip
-    if (sectorsSection && sectorsStrip && window.innerWidth >= 768) {
-      const sRect = sectorsSection.getBoundingClientRect();
-      const winH = window.innerHeight;
-
-      if (sRect.top < winH && sRect.bottom > 0) {
-        const sProgress = (winH - sRect.top) / (winH + sRect.height);
-        // Translate horizontally across the desk
-        const maxShift = 120;
-        const shiftX = (sProgress - 0.5) * -maxShift;
-        sectorsStrip.style.transform = `translate3d(${shiftX.toFixed(1)}px, 0, 0)`;
-      }
-    }
+    // 3. "Who We Work With" — Continuous Infinite Auto-Scroll handled via GPU-accelerated CSS marquee animation
 
     // 4. Approach Signature Physical Paper Timeline Progression
     if (approachSection && approachFill) {
